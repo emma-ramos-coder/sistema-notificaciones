@@ -1,4 +1,41 @@
-<?php require("layout/header.php"); ?>
+<!-- CABECERA -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Notificaciones</title>	
+	<script type="text/javascript">
+		function confirmar(){
+			return confirm('¿Estás seguro?, se eliminaran los datos');
+		}
+	</script>	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+</head>
+<body>
+	<div class="container-fluid p-2 mb-3">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Notificaciones</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarScroll">
+				<ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+					<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.php">Notificaciones</a>
+					</li>					
+					<li class="nav-item">
+					<a class="nav-link active" href="indexCategoria.php">Categoria</a>
+					</li>					
+				</ul>				
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="container-fluid p-2 mb-3">
+
+<!-- CUERPO -->
 <h1 class="text-center">Nueva Notificación</h1>
 <form action="" method="">
 	<div class="col-md-6 mx-auto  border rounded-3 p-4 shadow">
@@ -43,15 +80,19 @@
 				<label for="nombre" class="form-label">Categoría: </label>
 				<select class="form-select" name="categoria_id">
 					<option selected disabled>--Selecciona una Categoría--</option>        
-						<?php
-						require("controlador/CategoriaController.php");
+						<!-- usando un controlador para obtener los nombres de las categorias -->
+                        <?php
+						/* require("controlador/CategoriaController.php");
 						$categoriaController = new CategoriaController();
 						$categorias = $categoriaController->listarA();						
 						foreach ($categorias as $key => $value) 
 							foreach ($value as $va) { 
 								echo "<option value='".$va['id']."'>".$va['nombre']."</option>";                
-							}
+							} */
 						?>
+                    <option value="1">Noticia</option>
+                    <option value="2">Evento</option>
+                    <option value="3">Comunicado</option>
 				</select>
 			</div>	
 		</div>	
@@ -64,4 +105,8 @@
 		<input type="hidden" name="m" value="guardar">		
 	</div>
 </form>
-<?php require("layout/footer.php"); ?>
+<!-- PIE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+		</div>
+	</body>
+</html>

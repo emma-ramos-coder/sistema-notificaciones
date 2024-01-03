@@ -1,0 +1,88 @@
+html,body{
+font-family: 'Roboto', sans-serif;
+}
+
+a{
+color:white;
+font-weight: bold;
+}
+
+a:hover{
+    color:ivory;
+}
+
+.contenedor{
+height: 100%;
+align-content: left;
+}
+
+.tarjeta{
+height: 550px;
+border-radius: 15px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.tarjeta-body{
+padding: 10px 20px;
+}
+
+.tarjeta-footer{
+padding: 10px 20px;
+}
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #512451;
+}
+
+.social_icon span:hover{
+color: #EADCD1;
+cursor: pointer;
+}
+
+.tarjeta-header h3{
+color: white;
+padding: 20px 20px;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: yellowgreen;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.login_btn{
+color: black;
+font-weight: bold;
+background-color:yellowgreen;
+padding: 10px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: #EADCD1;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
